@@ -42,6 +42,7 @@ export async function GET(req: Request) {
         const trivia = await redis.hgetall(triviaKey); // Get hash data
         if (trivia) {
           triviaData.push(trivia);
+          console.log(trivia.question); // Debug log
         }
       }
 
